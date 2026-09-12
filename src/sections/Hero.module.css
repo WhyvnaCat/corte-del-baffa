@@ -1,0 +1,141 @@
+.hero {
+  position: relative;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  color: var(--color-cream);
+  isolation: isolate;
+}
+
+.imageWrap {
+  position: absolute;
+  inset: 0;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    to top,
+    rgba(20, 10, 15, 0.88) 0%,
+    rgba(30, 16, 22, 0.55) 42%,
+    rgba(30, 16, 22, 0.25) 68%,
+    rgba(30, 16, 22, 0.35) 100%
+  );
+}
+
+.content {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--container-padding);
+  padding-bottom: clamp(3.5rem, 8vh, 6rem);
+  padding-top: 8rem;
+}
+
+.kicker {
+  font-size: var(--fs-xs);
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--color-ocher);
+  margin-bottom: var(--space-4);
+}
+
+.title {
+  font-size: var(--fs-3xl);
+  font-weight: 500;
+  line-height: 0.98;
+  margin-bottom: var(--space-4);
+}
+
+.subtitle {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: var(--fs-lg);
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: var(--space-5);
+}
+
+.quote {
+  font-size: var(--fs-md);
+  max-width: 32ch;
+  color: var(--color-cream);
+  border-left: 2px solid var(--color-ocher);
+  padding-left: var(--space-4);
+  margin-bottom: var(--space-7);
+  font-family: var(--font-display);
+}
+
+.ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+
+.scrollHint {
+  position: absolute;
+  bottom: var(--space-6);
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-2);
+  color: var(--color-text-on-dark-muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.scrollLine {
+  width: 1px;
+  height: 34px;
+  background: linear-gradient(to bottom, var(--color-ocher), transparent);
+  animation: scrollPulse 2.2s ease-in-out infinite;
+}
+
+@keyframes scrollPulse {
+  0%, 100% {
+    transform: scaleY(0.6);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .scrollLine {
+    animation: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .content {
+    padding-top: 6rem;
+  }
+
+  .ctas {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .ctas a {
+    text-align: center;
+  }
+
+  .scrollHint {
+    display: none;
+  }
+}
+
+@media (max-height: 700px) {
+  .scrollHint {
+    display: none;
+  }
+}

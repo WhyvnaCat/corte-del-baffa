@@ -1,0 +1,110 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 300;
+  background: rgba(15, 8, 11, 0.94);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-5);
+  animation: fadeIn 0.25s var(--ease-out);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.figure {
+  position: relative;
+  max-width: min(1400px, 92vw);
+  max-height: 86vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+.imageBox {
+  max-height: 78vh;
+  display: flex;
+}
+
+.imageBox img {
+  max-height: 78vh;
+  width: auto;
+  max-width: 100%;
+  object-fit: contain;
+  border-radius: var(--radius-sm);
+}
+
+.caption {
+  color: var(--color-cream);
+  font-size: var(--fs-sm);
+  text-align: center;
+}
+
+.counter {
+  color: var(--color-text-on-dark-muted);
+  font-size: var(--fs-xs);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.closeButton {
+  position: absolute;
+  top: -3rem;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: var(--color-cream);
+  font-size: 1.75rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: var(--space-2);
+}
+
+.navButton {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(243, 236, 223, 0.12);
+  border: none;
+  color: var(--color-cream);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s var(--ease-out);
+}
+
+.navButton:hover {
+  background: rgba(243, 236, 223, 0.25);
+}
+
+.prev {
+  left: var(--space-4);
+}
+
+.next {
+  right: var(--space-4);
+}
+
+@media (max-width: 640px) {
+  .closeButton {
+    top: -2.6rem;
+  }
+
+  .navButton {
+    width: 40px;
+    height: 40px;
+  }
+}

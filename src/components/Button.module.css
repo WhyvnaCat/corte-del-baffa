@@ -1,0 +1,59 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: 0.9rem 1.75rem;
+  border-radius: 999px;
+  font-size: var(--fs-sm);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: transform 0.35s var(--ease-out), background-color 0.35s var(--ease-out),
+    border-color 0.35s var(--ease-out), color 0.35s var(--ease-out);
+  white-space: nowrap;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.primary {
+  background: var(--color-ocher);
+  color: var(--color-aubergine);
+}
+
+.primary:hover {
+  background: var(--color-ocher-600);
+}
+
+.secondary {
+  background: transparent;
+  color: var(--color-cream);
+  border-color: var(--color-border-on-dark);
+}
+
+.secondary:hover {
+  background: rgba(243, 236, 223, 0.1);
+  border-color: var(--color-cream);
+}
+
+.onLight {
+  color: var(--color-ink);
+  border-color: var(--color-border);
+}
+
+.onLight:hover {
+  background: var(--color-cream);
+}
+
+.whatsapp {
+  background: #25d366;
+  color: #06210f;
+}
+
+.whatsapp:hover {
+  background: #1fb958;
+}

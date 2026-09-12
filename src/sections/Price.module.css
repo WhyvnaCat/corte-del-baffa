@@ -1,0 +1,28 @@
+.section {
+  background: var(--color-bg-alt);
+  padding-block: var(--space-9);
+  text-align: center;
+}
+
+.inner {
+  max-width: 40ch;
+  margin-inline: auto;
+}
+
+.heading {
+  margin-top: var(--space-3);
+  font-size: var(--fs-md);
+  color: var(--color-text-muted);
+  font-weight: 500;
+}
+
+.price {
+  font-size: var(--fs-2xl);
+  color: var(--color-terracotta-600);
+  margin-block: var(--space-3);
+}
+
+.note {
+  color: var(--color-text-muted);
+  font-size: var(--fs-sm);
+}

@@ -1,0 +1,79 @@
+:root {
+  /* Colors — drawn from the brochure's stone, wood and dusk tones */
+  --color-ink: #2b2420;
+  --color-ink-soft: #4a4038;
+  --color-paper: #fbf8f2;
+  --color-cream: #f3ecdf;
+  --color-cream-deep: #ece1cc;
+
+  --color-aubergine: #3a1f2b;
+  --color-aubergine-700: #4d2a3a;
+  --color-aubergine-600: #5c3345;
+
+  --color-terracotta: #b85c3a;
+  --color-terracotta-600: #a34e2f;
+
+  --color-ocher: #e2a13a;
+  --color-ocher-600: #c98826;
+
+  --color-stone: #8c8172;
+  --color-stone-200: #d9d2c2;
+  --color-stone-100: #e9e3d5;
+
+  --color-olive: #6b7350;
+  --color-wood: #6b4a34;
+
+  --color-white: #ffffff;
+
+  /* Semantic */
+  --color-bg: var(--color-paper);
+  --color-bg-alt: var(--color-cream);
+  --color-bg-dark: var(--color-aubergine);
+  --color-text: var(--color-ink);
+  --color-text-muted: var(--color-ink-soft);
+  --color-text-on-dark: var(--color-cream);
+  --color-text-on-dark-muted: #d8c7ca;
+  --color-accent: var(--color-ocher);
+  --color-accent-strong: var(--color-terracotta-600);
+  --color-border: rgba(43, 36, 32, 0.12);
+  --color-border-on-dark: rgba(243, 236, 223, 0.2);
+
+  /* Typography */
+  --font-display: "Fraunces", "Iowan Old Style", "Palatino Linotype", serif;
+  --font-body: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  --fs-xs: clamp(0.78rem, 0.75rem + 0.15vw, 0.88rem);
+  --fs-sm: clamp(0.9rem, 0.87rem + 0.15vw, 1rem);
+  --fs-base: clamp(1rem, 0.97rem + 0.2vw, 1.125rem);
+  --fs-md: clamp(1.15rem, 1.05rem + 0.4vw, 1.4rem);
+  --fs-lg: clamp(1.4rem, 1.2rem + 0.9vw, 1.9rem);
+  --fs-xl: clamp(1.9rem, 1.5rem + 1.8vw, 2.8rem);
+  --fs-2xl: clamp(2.4rem, 1.8rem + 2.8vw, 4rem);
+  --fs-3xl: clamp(2.8rem, 2rem + 4.2vw, 5.6rem);
+
+  /* Spacing */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4.5rem;
+  --space-9: 6.5rem;
+  --space-10: 9rem;
+
+  /* Layout */
+  --container-max: 1240px;
+  --container-narrow: 780px;
+  --container-padding: clamp(1.25rem, 5vw, 3.5rem);
+
+  /* Misc */
+  --radius-sm: 4px;
+  --radius-md: 12px;
+  --radius-lg: 28px;
+  --shadow-soft: 0 20px 60px -20px rgba(43, 30, 20, 0.35);
+  --shadow-card: 0 12px 30px -14px rgba(43, 30, 20, 0.25);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-base: 0.5s var(--ease-out);
+}
